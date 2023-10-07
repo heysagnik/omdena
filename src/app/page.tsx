@@ -13,21 +13,21 @@ const navigation = [
 const people =[
   
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
-    twitterUrl: 'https://twitter.com/lesliecdubs',
-    linkedinUrl: 'https://www.linkedin.com/in/lesliealexander1/',
+    name: 'Eeman ',
+    role: 'Chapter Lead',
+    twitterUrl: 'https://twitter.com/',
+    linkedinUrl: 'https://www.linkedin.com/in/',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      '/Emam.png',
   },
   
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
+    name: 'Vaasu       ',
+    role: "Chapter Lead",
     twitterUrl: 'https://twitter.com/lesliecdubs',
     linkedinUrl: 'https://www.linkedin.com/in/lesliealexander1/',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      '/Vaasu.png',
   },
 
 
@@ -188,38 +188,6 @@ export default function Home() {
         </div>
       </div>
       <div>
-      <div className="bg-white py-10" id='works'>
-        
-        <div className=" px-16 py-16 mx-10  bg-slate-400 rounded-2xl">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-              Works
-      </h1>
-
-      <ul role="list" className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-         
-          {works.map((project) => (
-            <li key={project.title}>
-               <div className="p-8 space-y-3 border-2 border-gray-500 bg-white rounded-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500">
-               <img className="w-100 object-cover rounded-md" src={project.imageUrl} alt="" />
-                <p className="text-black ">
-               {project.title}
-                </p>
-                <div className="flex justify-between">
-                  <span className={`text-sm mt-3.5 font-medium py-0.5 px-4 rounded-3xl text-black align-middle ${project.progress === 'COMPLETED' ? 'bg-green-400' : 'bg-yellow-400'}`}>{project.progress}</span>
-                <a href={project.link} className="inline-flex ">
-                      <img src="https://www.svgrepo.com/download/429499/arrow-circle-direction-9.svg" alt="" className="h-10 w-10" />
-                </a>  
-                </div>
-            </div>
-            </li>
-          ))}
-          <li/>
-        </ul>
-          
-        </div>
-        
-      </div>
-      <div>
       <div className="bg-white py-24 sm:py-32" id='about'>
               
       <div className="text-center" >
@@ -237,15 +205,14 @@ export default function Home() {
           <li/>
           {people.map((person) => (
             <li key={person.name}>
-              <div className="flex items-center gap-x-4">
+              <div className="flex gap-x-4">
                 <img className="h-20 w-20 rounded-full" src={person.imageUrl} alt="" />
-                <div>
+                <div className='items-start'>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                   <div className="flex gap-x-2 mt-1">
                   <a href={person.linkedinUrl}><img className="h-7" src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="" /></a>
-                  <a href={person.twitterUrl}><img className="h-5 mt-1" src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="" /></a>
-                  </div>
+                 </div>
                 </div>
               </div>
             </li>
@@ -254,6 +221,39 @@ export default function Home() {
         </ul>
       </div>
     </div>
+      </div>
+      
+      <div>
+      <div className="bg-white py-10" id='works'>
+        
+      <div className=" px-8 py-10 mx-2  bg-slate-400 rounded-2xl sm:mx-10 sm:p-16">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
+              Works
+      </h1>
+
+      <ul role="list" className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+         
+          {works.map((project) => (
+            <li key={project.title}>
+               <div className="p-8 space-y-3 border-2 border-gray-500 bg-white rounded-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500">
+               <img className="w-100 object-cover rounded-md" src={project.imageUrl} alt="" />
+                <p className="text-black ">
+               {project.title}
+                </p>
+                <div className="flex justify-between">
+                  <span className={`text-sm mt-3.5 font-medium py-0.5 px-4 rounded-3xl text-black align-middle ${project.progress === 'COMPLETED' ? 'bg-green-400' : 'bg-yellow-400'}`}>{project.progress}</span>
+                <a href={project.link} className="inline-flex ">
+                      <img src="https://www.svgrepo.com/download/429499/arrow-circle-direction-9.svg" alt="" className="h-8 py-1 sm:h-10" />
+                </a>  
+                </div>
+            </div>
+            </li>
+          ))}
+          <li/>
+        </ul>
+          
+        </div>
+        
       </div>
       
 
