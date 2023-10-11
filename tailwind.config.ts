@@ -8,12 +8,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wave: {
+          to: {
+            "margin-left": "-5%",
+           
+
+          }
+          
+        }
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+
+    animation: {
+      wave: "wave 1.5s ease-in-out infinite"
+    },
+    
   },
   plugins: [],
 }
