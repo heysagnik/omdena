@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-loose" >
-              Harnessing <span className='underline decoration-wavy decoration-green-400 underline-offset-10'>ML</span> to solve Global challenges
+              Harnessing ML to solve <span className='underline decoration-wavy decoration-green-400 underline-offset-8'>Global challenges</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
              Omdena VIT BHOPAL Local Chapter
